@@ -210,7 +210,9 @@
     color: #fff;
     width: 40%;
   }
-  
+  form input {
+    width: 75%;
+  }
   
   .select-dropdown,
   .select-status {
