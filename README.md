@@ -1,11 +1,11 @@
-**Project name**: Password Generator
+**Project name**: Web API Challenge
 
-**Description**: This project purpose was to test our intial javascript skills we learned throughout the week
+**Description**: This project purpose was to test our javescript skills and using the APIs fundamentals we learned throughout the week
 
 
 **Installation**: 	
 
-access Github repository here: https://github.com/cjsmith1988/PasswordGenerator.git
+access Github repository here: https://github.com/cjsmith1988/Take-the-Quiz.git
 
 
 access Application URL here: https://cjsmith1988.github.io/PasswordGenerator/
@@ -54,5 +54,5 @@ THEN I can save my initials and score
 
 
 
-![alt text](https://github.com/cjsmith1988/PasswordGenerator/blob/main/PasswordGeneratorScreenGrab.PNG?raw=true)
+![alt text](https://github.com/cjsmith1988/Take-the-Quiz/blob/main/quizScreenGrab.PNGraw=true)
 
