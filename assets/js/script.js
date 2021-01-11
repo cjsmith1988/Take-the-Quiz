@@ -1,4 +1,7 @@
 var question = [];
+var highScore = [];
+var score = [];
+var headerEl = document.querySelector("header");
 var questionWrapperEl = document.querySelector(".question-wrapper");
 var questionContentEl = document.createElement("div");
 var questionCounter = 0;
@@ -6,6 +9,7 @@ var temp = "";
 var isWrong = false;
 var time = 150;
 var timerStop = false;
+var noHighScore = false;
 
 
 question = [
@@ -72,7 +76,6 @@ var timer = function() {
 var startButtonHandler = function(event) {
     // get target element from event
     var targetEl = event.target;
-    
     // delete button was clicked
     if (targetEl.matches("#start")) {
         var questionContentEl = document.querySelector(".info");
@@ -97,7 +100,21 @@ var startButtonHandler = function(event) {
         var picked = "d"
         checkAnswer(picked);
       }
-
+    else if (targetEl.matches("#submit")) {
+        event.preventDefault();
+        var nameInput = document.querySelector("input[name='task-name']").value;
+        score = [
+            {            
+                "name": nameInput,
+                "score": time,
+            }
+        ];
+        HighScoreInfo(score);
+      }
+    else if (targetEl.matches(".high-score-btn")) {
+        event.preventDefault();
+        HighScoreInfo(score);
+      }
 
   };
   var checkAnswer = function(option) {
@@ -185,9 +202,61 @@ var startButtonHandler = function(event) {
       "<div class='form-group'><input type='text'name='task-name'placeholder='Enter your name'/></div>"+
       "<div class='form-group'><button class='btn delete-btn'id='submit'>Submit</button></div>";
     questionContentEl.appendChild(finalFormEl);
+  }; 
+  var createHighScoreEl = function() {
+    questionContentEl.className = "info";
+    questionContentEl.innerHTML =
+      "<h3>High Scores!</h3>";
+    questionWrapperEl.appendChild(questionContentEl);
+    if (noHighScore === false) {
+        var highScoretextEl = document.createElement("p");
+        highScoretextEl.className = "question";
+        highScoretextEl.textContent = "High Score: " + highScore[0].name + " - " + highScore[0].score;
+        questionContentEl.appendChild(highScoretextEl);
+    }
+    else {
+        var highScoretextEl = document.createElement("p");
+        highScoretextEl.className = "question";
+        highScoretextEl.textContent = "No Scores Yet";
+        questionContentEl.appendChild(highScoretextEl);
+    };
+    if (time < 150) {
+        if (score[0].score < highScore[0].score && noHighScore === false) {
+            var scoreTextEl = document.createElement("p");
+            scoreTextEl.className = "question";
+            scoreTextEl.textContent = "Your Score: " + score[0].name + " - " + score[0].score;
+            questionContentEl.appendChild(scoreTextEl);
+        };
+    };
+    
+  }; 
 
-   
-
-  };
-
+  var HighScoreInfo = function(score) {
+    
+    if (noHighScore === true) {
+        highScore = score;
+    };
+    if (time < 150) {
+        if (score[0].score > highScore[0].score) {
+                highScore[0].score = score[0].score;
+                highScore[0].name = score[0].name;
+            };
+    };
+    localStorage.setItem("highScore", JSON.stringify(highScore));
+    //questionContentEl.remove();
+    createHighScoreEl();
+ };
+ var loadHighScore = function () { 
+    var savedHighScore = localStorage.getItem("highScore");
+    // if there is not high score then nothing happens and an empty array
+    if (!savedHighScore) {
+        noHighScore = true;
+        return noHighScore;
+    }
+    // else, load high score
+    // parse into array of objects
+    highScore = JSON.parse(savedHighScore);
+};
+headerEl.addEventListener("click", startButtonHandler);
 questionWrapperEl.addEventListener("click", startButtonHandler);
+loadHighScore();
