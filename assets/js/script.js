@@ -208,7 +208,7 @@ var startButtonHandler = function(event) {
     questionContentEl.innerHTML =
       "<h3>High Scores!</h3>";
     questionWrapperEl.appendChild(questionContentEl);
-    if (noHighScore === false) {
+    if (time < 150) {
         var highScoretextEl = document.createElement("p");
         highScoretextEl.className = "question";
         highScoretextEl.textContent = "High Score: " + highScore[0].name + " - " + highScore[0].score;
