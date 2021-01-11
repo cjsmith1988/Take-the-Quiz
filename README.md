@@ -2,13 +2,14 @@
 
 **Description**: This project purpose was to test our javescript skills and using the APIs fundamentals we learned throughout the week
 
+**Special Notes**: the CSS was leveraged from the weekly lesson activity "taskinator" with modifications.
 
 **Installation**: 	
 
 access Github repository here: https://github.com/cjsmith1988/Take-the-Quiz.git
 
 
-access Application URL here: https://cjsmith1988.github.io/PasswordGenerator/
+access Application URL here: https://cjsmith1988.github.io/Take-the-Quiz/
 				
 
 **Usage**: This was used for testing methods learned from the previous week.
