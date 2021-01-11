@@ -1,1 +1,58 @@
-# Take-the-Quiz
+**Project name**: Password Generator
+
+**Description**: This project purpose was to test our intial javascript skills we learned throughout the week
+
+
+**Installation**: 	
+
+access Github repository here: https://github.com/cjsmith1988/PasswordGenerator.git
+
+
+access Application URL here: https://cjsmith1988.github.io/PasswordGenerator/
+				
+
+**Usage**: This was used for testing methods learned from the previous week.
+
+**Contributing**: this is unfinished application.
+
+**Credits**: This page was made by Curtis Smith
+
+**License**: This has no license
+
+### User Story:
+
+AS A coding boot camp student
+
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+
+SO THAT I can gauge my progress compared to my peers
+
+
+### Requirements:
+
+GIVEN I am taking a code quiz
+
+WHEN I click the start button
+
+THEN a timer starts and I am presented with a question
+
+WHEN I answer a question
+
+THEN I am presented with another question
+
+WHEN I answer a question incorrectly
+
+THEN time is subtracted from the clock
+
+WHEN all questions are answered or the timer reaches 0
+
+THEN the game is over
+
+WHEN the game is over
+
+THEN I can save my initials and score
+
+
+
+![alt text](https://github.com/cjsmith1988/PasswordGenerator/blob/main/PasswordGeneratorScreenGrab.PNG?raw=true)
+
