@@ -20,7 +20,7 @@ question = [
         "option2": "2. booleans",
         "option3": "3. alerts",
         "option4": "4. numbers",
-        "answer": "b"
+        "answer": "c"
     },
     {
         "id": "1",
@@ -47,7 +47,7 @@ question = [
         "option2": "2. curly brackets",
         "option3": "3. quotes",
         "option4": "4. parenthesis",
-        "answer": "b"
+        "answer": "c"
     },
     {
         "id": "4",
