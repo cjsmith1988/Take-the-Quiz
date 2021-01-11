@@ -13,7 +13,7 @@
             <button class="high-score-btn">View high scores</button> 
         </div>
         <div class="timer">
-            <p class="timer">Timer Placeholder</p> 
+            <p class="timer">Timer: </p><p class="timer" id="time">150</p> 
         </div>
     </header>
 
@@ -21,10 +21,16 @@
     <main class="page-content" id="page-content">
         <!-- Tasks To Do-->
         <section class="question-wrapper">
-            <h3>Coding Quiz Challenge</h3>
-            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-            <ul class="task-list" id="tasks-to-do"> 
-            </ul>
+            <div class="info">
+                <h3>Coding Quiz Challenge</h3>
+                <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                <ul class="task-list" id="tasks-to-do"> 
+                    <li>
+                        <button class="btn delete-btn" id="start">Start Quiz</button>
+                    </li>
+                </ul>  
+            </div>
+        
         </section>
         
     </main>

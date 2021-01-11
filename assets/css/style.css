@@ -59,6 +59,9 @@
   li {
     font-size: 1.6rem;
   }
+  #wrong {
+      color: red;
+  }
   
   form {
     display: flex;
@@ -70,10 +73,14 @@
     outline: none;
     border: none;
     padding: 12px;
-    width: 100%;
-    font-size: 2.2rem;
+    width: 75%;
+    font-size: 1.5rem;
     border: 2px solid var(--grey);
     border-radius: 12px;
+    
+  }
+  form #submit {  
+    width: 50%;
   }
   
   form .form-group {
@@ -201,6 +208,7 @@
     margin: 3px;
     background: var(--secondary);
     color: #fff;
+    width: 40%;
   }
   
   
@@ -255,6 +263,7 @@
     font-size: 2rem;
   }
   
+
   @media screen and (max-width: 980px) {
     form .form-group {
       flex: 1 100%;
